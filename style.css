@@ -1,8 +1,15 @@
+/*Adding the background Image to full screen and making it not repeat itself*/
 body, html {
     height: 100%;
     margin: 0;
     font-family: sans-serif, Dhurjati;
+    background: url("./pictures/chess-background-1920p.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+/*Removing list dots*/
 ul {
     list-style-type: none;
     margin-left: auto;
@@ -12,15 +19,12 @@ a {
     color: #ffe4bfff;
     font-size: 16px;
 }
+/*Main flex container*/
 .content {
-    background-image: url("./pictures/chess-background-1920p.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-direction: column;
 }
+/*Adding header margin and making it a flex container*/
 .header {
     padding-left: 200px;
     padding-right: 200px;
@@ -28,6 +32,7 @@ a {
     display: flex;
     flex-direction: column;
 }
+/*Top part of the header*/
 .header-1 {
     display: flex;
     justify-content: space-between;
@@ -43,6 +48,7 @@ a {
     display: flex;
     gap: 100px;
 }
+/*Bottom part of the header*/
 .header-2 {
     display: flex;
     margin-top: 50px;
@@ -70,11 +76,13 @@ a {
     flex-direction: column;
     justify-content: center;
 }
+/*Header image*/
 .header-2-r img {
     height: 250px;
     width: auto;
     box-shadow: 0 0 10px 3px #00000067;
 }
+/*Adjusting the logo size and text*/
 .logo {
     margin: 0;
     width: auto;
@@ -87,6 +95,7 @@ a {
     height: fit-content;
     width: fit-content;
 }
+/*Header hero text*/
 #hero {
     font-family: Dhurjati;
     font-size: 50px;
@@ -100,4 +109,41 @@ a {
     color: #ffe4bfff;
     margin-top: 0;
     max-width: 460px;
+}
+/*Important links*/
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.information h1 {
+    color: #90603dff;
+    text-shadow: 1px 1px 5px #ffe4bfff, -1px -1px 5px #ffe4bfff, 1px -1px 5px #ffe4bfff, -1px 1px 5px #ffe4bfff;
+    margin-bottom: 100px;
+}
+/*Icons with text links*/
+.illustrations {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+.illustrations div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.illustrations img {
+    width: auto;
+    height: 200px;
+}
+.illustrations a {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #90603dff;
+    text-shadow: 1px 1px 2px #ffe4bfff, -1px -1px 2px #ffe4bfff, 1px -1px 2px #ffe4bfff, -1px 1px 2px #ffe4bfff;
+    width: 200px;
 }
