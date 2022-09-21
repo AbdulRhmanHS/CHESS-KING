@@ -1,7 +1,9 @@
 /*Adding the background Image to full screen and making it not repeat itself*/
 body, html {
     height: 100%;
+    width: 100%;
     margin: 0;
+    padding: 0;
     font-family: sans-serif, Dhurjati;
     background: url("./pictures/chess-background-1920p.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -9,7 +11,7 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
 }
-/*Removing list dots*/
+/*Removing list dots and the line under links*/
 ul {
     list-style-type: none;
     margin-left: auto;
@@ -23,6 +25,7 @@ a {
 .content {
     display: flex;
     flex-direction: column;
+    min-width: 1250px;
 }
 /*Adding header margin and making it a flex container*/
 .header {
@@ -47,6 +50,7 @@ a {
 .list-1 {
     display: flex;
     gap: 100px;
+    flex-shrink: 0;
 }
 /*Bottom part of the header*/
 .header-2 {
@@ -94,6 +98,7 @@ a {
     color: #ffe4bfff;
     height: fit-content;
     width: fit-content;
+    flex-shrink: 0;
 }
 /*Header hero text*/
 #hero {
