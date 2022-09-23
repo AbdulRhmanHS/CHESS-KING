@@ -14,7 +14,6 @@ body, html {
 /*Removing list dots and the line under links*/
 ul {
     list-style-type: none;
-    margin-left: auto;
 }
 a {
     text-decoration: none;
@@ -25,12 +24,11 @@ a {
 .content {
     display: flex;
     flex-direction: column;
-    min-width: 1250px;
 }
 /*Adding header margin and making it a flex container*/
 .header {
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
     background: linear-gradient(180deg, rgba(179,136,24,1) 0%, rgba(144,96,61,0.7) 100%);
     display: flex;
     flex-direction: column;
@@ -40,16 +38,31 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 210px;
+    gap: 50px;
 }
 .header-logo {
     display: flex;
     align-items: center;
     gap: 25px;
 }
+/*Adjusting the logo size and text*/
+.logo {
+    margin: 0;
+    width: auto;
+    height: 75px;
+}
+.logo-text {
+    font-family: Dhurjati;
+    font-size: 30px;
+    color: #ffe4bfff;
+    height: fit-content;
+    width: fit-content;
+    flex-shrink: 0;
+}
 .list-1 {
     display: flex;
-    gap: 100px;
+    justify-content: space-between;
+    width: 365px;
     flex-shrink: 0;
 }
 /*Bottom part of the header*/
@@ -57,7 +70,7 @@ a {
     display: flex;
     margin-top: 50px;
     margin-bottom: 50px;
-    gap: 20px;
+    gap: 50px;
 }
 .header-2-l {
     display: flex;
@@ -82,23 +95,9 @@ a {
 }
 /*Header image*/
 .header-2-r img {
-    height: 250px;
-    width: auto;
+    height: auto;
+    width: 365px;
     box-shadow: 0 0 10px 3px #00000067;
-}
-/*Adjusting the logo size and text*/
-.logo {
-    margin: 0;
-    width: auto;
-    height: 75px;
-}
-.logo-text {
-    font-family: Dhurjati;
-    font-size: 30px;
-    color: #ffe4bfff;
-    height: fit-content;
-    width: fit-content;
-    flex-shrink: 0;
 }
 /*Header hero text*/
 #hero {
@@ -106,7 +105,7 @@ a {
     font-size: 50px;
     color: #ffe4bfff;
     margin: 0;
-    width: 400px;
+    max-width: 400px;
     line-height: 70px;
 }
 #sub-hero {
@@ -132,6 +131,8 @@ a {
 .illustrations {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 70px;
 }
 .illustrations div {
@@ -151,4 +152,54 @@ a {
     color: #90603dff;
     text-shadow: 1px 1px 2px #ffe4bfff, -1px -1px 2px #ffe4bfff, 1px -1px 2px #ffe4bfff, -1px 1px 2px #ffe4bfff;
     width: 200px;
+}
+
+/*Resposiveness magic*/
+@media (max-width: 870px) {
+    .content {
+        min-width: 450px;
+    }
+    .header {
+        padding: 10px 30px;
+    }
+    .header-1 {
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+    .logo {
+        width: auto;
+        height: 50px;
+    }
+    .logo-text {
+        font-size: 20px;
+    }
+    .list-1 {
+        width: calc(40% + 1vw);
+    }
+    .list-1 a {
+        font-size: 12px;
+    }
+    .header-2 {
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    .header-2-l {
+        align-items: center;
+    }
+    .header-2-r {
+        margin: 0;
+    }
+    .header-2-r img {
+        height: auto;
+        max-width: 100%;
+    }
+    .information h1 {
+        white-space: nowrap;
+    }
+    .illustrations {
+        justify-content: center;
+    }
 }
