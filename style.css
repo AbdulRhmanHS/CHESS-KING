@@ -79,7 +79,7 @@ a {
 .header-2-l {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
 }
 .header-2-r {
     margin-left: auto;
@@ -106,6 +106,7 @@ a {
     font-size: 26px;
     color: #ffe4bfff;
     line-height: 50px;
+    margin: 0;
 }
 /*Bottom part of the header (Buttons)*/
 .header-3 {
@@ -178,6 +179,9 @@ a {
         flex-direction: column;
         align-items: center;
         gap: 30px;
+    }
+    .header-2 {
+        margin-top: 50px;
     }
     .logo {
         width: auto;
