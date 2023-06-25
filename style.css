@@ -18,7 +18,7 @@ ul {
 a {
     text-decoration: none;
     color: #ffe4bfff;
-    font-size: 16px;
+    font-size: 20px;
 }
 /*Main flex container*/
 .content {
@@ -27,8 +27,11 @@ a {
 }
 /*Adding header margin and making it a flex container*/
 .header {
+    width: auto;
+    height: max-content;
     padding-left: 100px;
     padding-right: 100px;
+    padding-bottom: 100px;
     background: linear-gradient(180deg, rgba(179,136,24,1) 0%, rgba(144,96,61,0.7) 100%);
     display: flex;
     flex-direction: column;
@@ -62,30 +65,20 @@ a {
 .list-1 {
     display: flex;
     justify-content: space-between;
-    width: 365px;
+    width: 600px;
     flex-shrink: 0;
 }
 /*Bottom part of the header*/
 .header-2 {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-bottom: 150px;
     gap: 50px;
 }
 .header-2-l {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-.header-2-l a {
-    color: #ffe4bfff;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #6a3d00ff;
-    padding: 10px 25px;
-    border-radius: 10px;
-    width: fit-content;
-    text-align: center;
+    gap: 20px;
 }
 .header-2-r {
     margin-left: auto;
@@ -96,23 +89,38 @@ a {
 /*Header image*/
 .header-2-r img {
     height: auto;
-    width: 365px;
+    width: 600px;
     box-shadow: 0 0 10px 3px #00000067;
 }
 /*Header hero text*/
 #hero {
     font-family: Dhurjati;
-    font-size: 50px;
+    font-weight: bold;
+    font-size: 70px;
     color: #ffe4bfff;
     margin: 0;
-    max-width: 400px;
-    line-height: 70px;
+    max-width: max-content;
 }
 #sub-hero {
-    font-size: 16px;
+    font-size: 26px;
     color: #ffe4bfff;
-    margin-top: 0;
-    max-width: 460px;
+    line-height: 50px;
+}
+/*Bottom part of the header (Button)*/
+.header-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.header-3 a {
+    color: #ffe4bfff;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #6a3d00ff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
 }
 /*Important links*/
 .information {
@@ -155,12 +163,12 @@ a {
 }
 
 /*Resposiveness magic*/
-@media (max-width: 870px) {
+@media (max-width: 1370px) {
     .content {
         min-width: 450px;
     }
     .header {
-        padding: 10px 30px;
+        padding: 10px 30px 30px 30px;
     }
     .header-1 {
         justify-content: space-between;
@@ -195,6 +203,10 @@ a {
     .header-2-r img {
         height: auto;
         max-width: 100%;
+    }
+    .header-3 {
+        align-items: center;
+        align-content: center;
     }
     .information h1 {
         white-space: nowrap;
