@@ -42,6 +42,7 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    margin-top: 10px;
 }
 .header-logo {
     display: flex;
@@ -52,7 +53,7 @@ a {
 .logo {
     margin: 0;
     width: auto;
-    height: 75px;
+    height: 100px;
 }
 .logo-text {
     font-family: Dhurjati;
@@ -106,11 +107,12 @@ a {
     color: #ffe4bfff;
     line-height: 50px;
 }
-/*Bottom part of the header (Button)*/
+/*Bottom part of the header (Buttons)*/
 .header-3 {
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    flex-direction: row;
+    justify-content: start;
+    gap: 50px;
 }
 .header-3 a {
     color: #ffe4bfff;
@@ -126,19 +128,21 @@ a {
 .information {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .information h1 {
+    font-size: 50px;
+    text-align: center;
     color: #90603dff;
     text-shadow: 1px 1px 5px #ffe4bfff, -1px -1px 5px #ffe4bfff, 1px -1px 5px #ffe4bfff, -1px 1px 5px #ffe4bfff;
+    margin-top: 200px;
     margin-bottom: 100px;
 }
 /*Icons with text links*/
 .illustrations {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     gap: 70px;
@@ -147,46 +151,52 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 .illustrations img {
     width: auto;
-    height: 200px;
+    height: 300px;
 }
 .illustrations a {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
     color: #90603dff;
     text-shadow: 1px 1px 2px #ffe4bfff, -1px -1px 2px #ffe4bfff, 1px -1px 2px #ffe4bfff, -1px 1px 2px #ffe4bfff;
-    width: 200px;
+    max-width: 300px;
 }
 
 /*Resposiveness magic*/
 @media (max-width: 1370px) {
     .content {
-        min-width: 450px;
+        min-width: 375px;
     }
     .header {
         padding: 10px 30px 30px 30px;
     }
     .header-1 {
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        gap: 0;
+        gap: 30px;
     }
     .logo {
         width: auto;
-        height: 50px;
+        height: 75px;
+    }
+    .header-logo {
+        display: flex;
+        justify-content: space-between;
     }
     .logo-text {
-        font-size: 20px;
+        font-size: 24px;
     }
     .list-1 {
-        width: calc(40% + 1vw);
+        width: 600px;
+        max-width: 100%;
+        padding: 0;
     }
     .list-1 a {
-        font-size: 12px;
+        font-size: 20px;
     }
     .header-2 {
         flex-direction: column-reverse;
@@ -205,13 +215,25 @@ a {
         max-width: 100%;
     }
     .header-3 {
+        flex-direction: column;
         align-items: center;
         align-content: center;
     }
+    .header-3 a {
+        font-size: 28px;
+    }
+    .information {
+        align-items: center;
+    }
     .information h1 {
         white-space: nowrap;
+        font-size: 40px;
     }
     .illustrations {
         justify-content: center;
+    }
+    .illustrations img {
+        width: auto;
+        height: 100%;
     }
 }
