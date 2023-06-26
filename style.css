@@ -44,6 +44,7 @@ a {
     gap: 50px;
     margin-top: 10px;
 }
+/*Logo and text next to it*/
 .header-logo {
     display: flex;
     align-items: center;
@@ -63,24 +64,27 @@ a {
     width: fit-content;
     flex-shrink: 0;
 }
+/*Header menu bar*/
 .list-1 {
     display: flex;
     justify-content: space-between;
     width: 600px;
     flex-shrink: 0;
 }
-/*Bottom part of the header*/
+/*Image and text next to it in the header*/
 .header-2 {
     display: flex;
     margin-top: 150px;
     margin-bottom: 150px;
     gap: 50px;
 }
+/*Left side*/
 .header-2-l {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
+/*Right side*/
 .header-2-r {
     margin-left: auto;
     display: flex;
@@ -93,7 +97,7 @@ a {
     width: 600px;
     box-shadow: 0 0 10px 3px #00000067;
 }
-/*Header hero text*/
+/*Header main big text*/
 #hero {
     font-family: Dhurjati;
     font-weight: bold;
@@ -102,6 +106,7 @@ a {
     margin: 0;
     max-width: max-content;
 }
+/*Header small text under the main big text*/
 #sub-hero {
     font-size: 26px;
     color: #ffe4bfff;
@@ -115,6 +120,7 @@ a {
     justify-content: start;
     gap: 50px;
 }
+/*Heaer buttons*/
 .header-3 a {
     color: #ffe4bfff;
     font-size: 36px;
@@ -132,6 +138,7 @@ a {
     padding-left: 100px;
     padding-right: 100px;
 }
+/*Intresting stuff*/
 .information h1 {
     font-size: 50px;
     text-align: center;
@@ -148,16 +155,19 @@ a {
     flex-wrap: wrap;
     gap: 70px;
 }
+/*Individual icon and text beneath it*/
 .illustrations div {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
+/*Icons only*/
 .illustrations img {
     width: auto;
     height: 300px;
 }
+/*Text under the icons only*/
 .illustrations a {
     font-size: 24px;
     font-weight: bold;
@@ -166,6 +176,7 @@ a {
     text-shadow: 1px 1px 2px #ffe4bfff, -1px -1px 2px #ffe4bfff, 1px -1px 2px #ffe4bfff, -1px 1px 2px #ffe4bfff;
     max-width: 300px;
 }
+/*Quote background*/
 .quote-container {
     margin: 400px 0 300px 0;
     padding: 50px;
@@ -179,15 +190,18 @@ a {
     align-items: center;
     justify-content: center;
 }
+/*Quote text*/
 .quote {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: fit-content;
 }
+/*Quote mentioner located in the lower right section of the quote*/
 #quoter {
     margin-left: auto;
 }
+/*Additional prompt to sign up background*/
 .additional {
     background-color: #90603dff;
     border-radius: 15px;
@@ -200,6 +214,7 @@ a {
     gap: 30px;
     min-width: fit-content;
 }
+/*All text at the additional window in general*/
 .additional .text p {
     display: flex;
     flex-direction: column;
@@ -209,9 +224,11 @@ a {
     margin-left: 80px;
     font-size: 20px;
 }
+/*Increasing the size of the bold text in additional*/
 .additional .text p b {
     font-size: 30px;
 }
+/*Sign up button in additional*/
 .additional .button a {
     display: flex;
     justify-content: center;
