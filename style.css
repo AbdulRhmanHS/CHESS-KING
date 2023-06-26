@@ -167,7 +167,7 @@ a {
     max-width: 300px;
 }
 .quote-container {
-    margin: 300px 0;
+    margin: 400px 0 300px 0;
     padding: 50px;
     background-color: rgba(106,61,0,0.6);
     box-shadow: 0 0 30px 40px rgba(106,61,0,0.6);
@@ -177,6 +177,7 @@ a {
     color: white;
     font-size: 32px;
     align-items: center;
+    justify-content: center;
 }
 .quote {
     display: flex;
@@ -186,6 +187,48 @@ a {
 }
 #quoter {
     margin-left: auto;
+}
+.additional {
+    background-color: #90603dff;
+    border-radius: 15px;
+    padding: 50px;
+    margin: 100px 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    gap: 30px;
+    min-width: fit-content;
+}
+.additional .text p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #ffe4bfff;
+    margin-left: 80px;
+    font-size: 20px;
+}
+.additional .text p b {
+    font-size: 30px;
+}
+.additional .button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #ffe4bfff;
+    background-color: #90603dff;
+    border: 5px;
+    border-style: solid;
+    border-color: #ffe4bfff;
+    border-radius: 15px;
+    padding: 15px 40px;
+    border: 10px soild;
+    width: fit-content;
+    margin-right: 80px;
+    white-space: nowrap;
+    max-width: 100%;
 }
 
 /*Resposiveness magic*/
@@ -260,5 +303,16 @@ a {
     .illustrations img {
         width: auto;
         height: 100%;
+    }
+    .additional {
+        flex-direction: column;
+        align-self: center;
+    }
+    .additional .text p {
+        margin: 0 auto;
+    }
+    .additional .button a {
+        align-self: center;
+        margin: 0 auto;
     }
 }
