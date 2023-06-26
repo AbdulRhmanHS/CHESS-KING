@@ -144,7 +144,7 @@ a {
     text-align: center;
     color: #90603dff;
     text-shadow: 1px 1px 5px #ffe4bfff, -1px -1px 5px #ffe4bfff, 1px -1px 5px #ffe4bfff, -1px 1px 5px #ffe4bfff;
-    margin-top: 200px;
+    margin-top: 330px;
     margin-bottom: 100px;
 }
 /*Icons with text links*/
@@ -178,7 +178,7 @@ a {
 }
 /*Quote background*/
 .quote-container {
-    margin: 400px 0 300px 0;
+    margin: 400px 0 100px 0;
     padding: 50px;
     background-color: rgba(106,61,0,0.6);
     box-shadow: 0 0 30px 40px rgba(106,61,0,0.6);
@@ -203,10 +203,10 @@ a {
 }
 /*Additional prompt to sign up background*/
 .additional {
-    background-color: #90603dff;
+    background-color: rgba(106,61,0,1);
     border-radius: 15px;
     padding: 50px;
-    margin: 100px 350px;
+    margin: 100px 250px 145px 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -235,7 +235,7 @@ a {
     align-items: center;
     font-size: 30px;
     color: #ffe4bfff;
-    background-color: #90603dff;
+    background-color: rgba(106,61,0,1);
     border: 5px;
     border-style: solid;
     border-color: #ffe4bfff;
@@ -246,6 +246,71 @@ a {
     margin-right: 80px;
     white-space: nowrap;
     max-width: 100%;
+}
+/*Footer background and font color*/
+.footer {
+    font-family: sans-serif;
+    color: #ffe4bfff;
+    background: linear-gradient(180deg, rgba(179,136,24,1) 0%, rgba(144,96,61,1) 100%);
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+}
+/*Left side of the footer*/
+.footer .footer-l {
+    display: flex;
+    gap: 10px;
+    margin-left: 50px;
+}
+/*Footer logo size and position*/
+.footer-logo {
+    align-self: center;
+}
+.footer-logo .logo {
+    margin: 0;
+    width: auto;
+    height: 75px;
+}
+/*Footer logo text*/
+.footer .footer-l .text {
+    font-size: 16px;
+    font-family: Dhurjati;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.footer .footer-l .text p {
+    margin: 0;
+    padding: 0;
+}
+.footer .footer-l .text p b {
+    font-size: 24px;
+}
+/*vertical bar that seperates the footer content*/
+.seperating-bar {
+    background-color: #ffe4bfff;
+    height: 100px;
+    width: 5px;
+    border-radius: 5px;
+    align-self: center;
+}
+/*Right side of the footer*/
+.footer-r {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+.footer-r .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-r .copyright p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
 }
 
 /*Resposiveness magic*/
@@ -331,5 +396,17 @@ a {
     .additional .button a {
         align-self: center;
         margin: 0 auto;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-l {
+        margin: 0;
+        align-self: center;
+    }
+    .seperating-bar {
+        height: 5px;
+        width: 300px;
     }
 }
