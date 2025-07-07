@@ -9,14 +9,14 @@ body, html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: flex;
 }
 
 :root {
-    --formWidth: 110vh;
+    --formWidth: 120vh;
 }
 
 .right {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,12 +28,14 @@ body, html {
 }
 
 .left {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: calc(100% - var(--formWidth));
 }
 
 .logo-content {
-    position: absolute;
+    margin-top: 10vh;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -41,7 +43,6 @@ body, html {
     gap: 2vh;
     height: 25vh;
     width: 100%;
-    top: 15vh;
     padding: 2vh;
     background-color: rgba(255, 228, 191, 0.8);
 }
@@ -59,10 +60,7 @@ img {
 }
 
 .left p {
-    position: absolute;
-    box-sizing: border-box;
     width: 100%;
-    top: 95vh;
     text-align: center;
     color: white;
     font-size: 1.7vh;
