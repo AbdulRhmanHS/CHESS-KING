@@ -5,7 +5,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: sans-serif, Dhurjati;
-    background: url("./pictures/chess-background-1920p.jpg") no-repeat center center fixed; 
+    background: url("pictures/chess-background-1920p.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
