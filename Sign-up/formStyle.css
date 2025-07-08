@@ -17,17 +17,7 @@ body, html {
     --mainColor: #ffe4bfff;
     --secondaryColor: #90603dff;
     --secondaryColorA: rgba(144, 96, 61, 0.5);
-}
-
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-color: #F4E3D3;
-    width: var(--formWidth);
-    right: 0;
+    --backgroundColor: #f2e0c9;
 }
 
 .left {
@@ -67,4 +57,69 @@ img {
     text-align: center;
     color: var(--mainColor);
     font-size: 1em;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--backgroundColor);
+    width: var(--formWidth);
+}
+ 
+.right .upper, .right .middle, .right .bottom {
+    width: 100%;
+    height: 33.33%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.right .upper p {
+    margin: 0;
+}
+
+.right .upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 1.5em;
+    text-align: start;
+    gap: 1.5em;
+}
+
+.right .middle {
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    box-shadow: 0 0.2em 0.3em #00000067;
+    height: 50%;
+}
+
+button {
+    height: 2.8em;
+    width: fit-content;
+    background-color: var(--secondaryColor);
+    color: var(--mainColor);
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0.5em 3em;
+    font-weight: bold;
+    margin: 1em 0 0 2em;
+    box-shadow: 0.1em 0.1em 0.3em #00000067;
+}
+
+.right .bottom p {
+    margin: 0;
+    margin: 2em 0 0 2em;
+    font-size: 1.2em;
+}
+
+.right .bottom p a {
+    color: var(--secondaryColor);
 }
