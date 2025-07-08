@@ -13,7 +13,7 @@ body, html {
 }
 
 :root {
-    --formWidth: 60%;
+    --formWidth: 50%;
     --mainColor: #ffe4bfff;
     --secondaryColor: #90603dff;
     --secondaryColorA: rgba(144, 96, 61, 0.5);
@@ -28,7 +28,7 @@ body, html {
 }
 
 .logo-content {
-    margin-top: 18%;
+    margin-top: 10%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@ body, html {
     gap: 2em;
     height: 22%;
     width: 100%;
-    padding: 1em;
+    padding: 1rem;
     background-color: var(--secondaryColorA);
 }
 
@@ -72,31 +72,53 @@ img {
 .right .upper, .right .middle, .right .bottom {
     width: 100%;
     height: 33.33%;
-    padding: 1em;
+    padding-left: 3rem;
     box-sizing: border-box;
 }
 
 .right .upper p {
-    margin: 0;
+    margin: 0 6em 0 0;
 }
 
 .right .upper {
+    height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: end;
     font-size: 1.5em;
     text-align: start;
     gap: 1.5em;
+    margin-bottom: 2.5em;
 }
 
 .right .middle {
     background-color: var(--mainColor);
     display: flex;
     flex-direction: column;
-    align-items: space-around;
     justify-content: center;
     box-shadow: 0 0.2em 0.3em #00000067;
-    height: 50%;
+    height: 35%;
+}
+
+.names, .contact, .password {
+    display: flex;
+    margin: 1.5em 0;
+}
+
+.right .middle .formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+input {
+    width: 80%;
+    height: 2em;
+    padding: 0.5em;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
 button {
@@ -107,16 +129,16 @@ button {
     border: none;
     font-size: 1.2em;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 0.5em 3em;
     font-weight: bold;
-    margin: 1em 0 0 2em;
+    margin-top: 2em;
     box-shadow: 0.1em 0.1em 0.3em #00000067;
 }
 
 .right .bottom p {
     margin: 0;
-    margin: 2em 0 0 2em;
+    margin-top: 2em;
     font-size: 1.2em;
 }
 
