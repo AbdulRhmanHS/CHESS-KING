@@ -4,7 +4,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: sans-serif, Dhurjati;
-    background: url("../pictures/randy-fath-G1yhU1Ej-9A-unsplash.jpg") no-repeat center center fixed;
+    background: url("../pictures/jani-kaasinen-7VGzV09YnvA-unsplash.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,7 +13,10 @@ body, html {
 }
 
 :root {
-    --formWidth: 120vh;
+    --formWidth: 60%;
+    --mainColor: #ffe4bfff;
+    --secondaryColor: #90603dff;
+    --secondaryColorA: rgba(144, 96, 61, 0.5);
 }
 
 .right {
@@ -22,7 +25,7 @@ body, html {
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-color: #ffe4bfff;
+    background-color: #F4E3D3;
     width: var(--formWidth);
     right: 0;
 }
@@ -35,21 +38,21 @@ body, html {
 }
 
 .logo-content {
-    margin-top: 10vh;
+    margin-top: 18%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2vh;
-    height: 25vh;
+    gap: 2em;
+    height: 22%;
     width: 100%;
-    padding: 2vh;
-    background-color: rgba(255, 228, 191, 0.8);
+    padding: 1em;
+    background-color: var(--secondaryColorA);
 }
 
 .logo-content h1 {
-    font-size: 4vh;
-    color: #333;
+    font-size: 3em;
+    color: var(--mainColor);
     margin: 0;
 }
 
@@ -59,13 +62,9 @@ img {
     object-fit: contain;
 }
 
-.left p {
+.left p, .left p a {
     width: 100%;
     text-align: center;
-    color: white;
-    font-size: 1.7vh;
-}
-
-.left p a {
-    color: white;
+    color: var(--mainColor);
+    font-size: 1em;
 }
