@@ -1,22 +1,17 @@
 /*Adding the background Image to full screen and making it not repeat itself*/
 body, html {
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--backgroundColor);
     font-family: sans-serif, Dhurjati;
-    background: url("pictures/chess-background-1920p.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 :root {
     --mainColor: #ffe4bfff;
     --secondaryColor: #6a3d00ff;
-    --bottomColor: rgba(144, 96, 61, 1);
-    --bottomColorA: rgba(144,96,61,0.7);
+    --terenaryColor: rgba(144, 96, 61, 1);
+    --backgroundColor: #fdfaf6;
+    --accentColor: #f0e7dc;
 }
 /*Removing list dots and the line under links*/
 ul {
@@ -24,8 +19,6 @@ ul {
 }
 a {
     text-decoration: none;
-    color: var(--mainColor);
-    font-size: 20px;
 }
 /*Main flex container*/
 .content {
@@ -39,7 +32,7 @@ a {
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 100px;
-    background-color: var(--bottomColorA);
+    background-color: var(--terenaryColor);
     display: flex;
     flex-direction: column;
 }
@@ -77,6 +70,10 @@ a {
     justify-content: space-between;
     width: 600px;
     flex-shrink: 0;
+}
+.list-1 a {
+    color: var(--mainColor);
+    font-size: 1.5rem;
 }
 /*Image and text next to it in the header*/
 .header-2 {
@@ -127,14 +124,14 @@ a {
     justify-content: start;
     gap: 50px;
 }
-/*Heaer buttons*/
+/*Header buttons*/
 .header-3 a {
     color: var(--mainColor);
-    font-size: 36px;
+    font-size: 1.5rem;
     font-weight: bold;
     background-color: var(--secondaryColor);
-    padding: 15px 30px;
-    border-radius: 10px;
+    border-radius: 0.8rem;
+    padding: 15px 50px;
     width: fit-content;
     text-align: center;
 }
@@ -149,10 +146,8 @@ a {
 .information h1 {
     font-size: 50px;
     text-align: center;
-    color: var(--secondaryColor);
-    text-shadow: 1px 1px 5px var(--mainColor), -1px -1px 5px var(--mainColor), 1px -1px 5px var(--mainColor), -1px 1px 5px var(--mainColor);
-    margin-top: 330px;
-    margin-bottom: 100px;
+    color: var(--terenaryColor);
+    margin: 70px 0;
 }
 /*Icons with text links*/
 .illustrations {
@@ -179,20 +174,18 @@ a {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: var(--secondaryColor);
-    text-shadow: 1px 1px 2px var(--mainColor), -1px -1px 2px var(--mainColor), 1px -1px 2px var(--mainColor), -1px 1px 2px var(--mainColor);
+    color: var(--terenaryColor);
     max-width: 300px;
 }
 /*Quote background*/
 .quote-container {
-    margin: 400px 0 100px 0;
+    margin: 150px 0;
     padding: 50px;
-    background-color: var(--bottomColorA);
-    box-shadow: 0 0 30px 40px var(--bottomColorA);
+    background-color: var(--accentColor);
     display: flex;
     flex-direction: column;
     font-family: aakar;
-    color: var(--mainColor);
+    color: var(--terenaryColor);
     font-size: 32px;
     align-items: center;
     justify-content: center;
@@ -210,10 +203,10 @@ a {
 }
 /*Additional prompt to sign up background*/
 .additional {
-    background-color: var(--bottomColor);
-    border-radius: 15px;
-    padding: 50px;
-    margin: 100px 250px 145px 250px;
+    background-color: var(--terenaryColor);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 15% 150px 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -240,12 +233,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 1.5rem;
     color: var(--mainColor);
     background-color: var(--secondaryColor);
     border: 5px;
-    border-radius: 10px;
-    padding: 15px 40px;
+    border-radius: 0.8rem;
+    border: 3px solid var(--mainColor);
+    padding: 9px 50px;
     width: fit-content;
     margin-right: 80px;
     white-space: nowrap;
@@ -255,7 +249,7 @@ a {
 .footer {
     font-family: sans-serif;
     color: var(--mainColor);
-    background-color: var(--bottomColor);
+    background-color: var(--terenaryColor);
     padding: 15px;
     display: flex;
     gap: 20px;
@@ -392,10 +386,14 @@ a {
     }
     .additional {
         flex-direction: column;
-        align-self: center;
+        align-items: center;
+        padding: 20px;
+        margin: 0 10% 100px 10%;
     }
     .additional .text p {
-        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
     }
     .additional .button a {
         align-self: center;

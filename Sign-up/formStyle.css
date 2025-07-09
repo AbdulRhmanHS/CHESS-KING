@@ -19,7 +19,8 @@ body, html {
     --secondaryColor: #6a3d00ff;
     --terenaryColor: rgba(144, 96, 61, 1);
     --ternaryColorA: rgba(144,96,61,0.5);
-    --backgroundColor: #f7f7f7;
+    --backgroundColor: #fdfaf6;
+    --accentColor: #f0e7dc;
 }
 
 .left {
@@ -31,7 +32,7 @@ body, html {
 }
 
 .left .logo-content {
-    margin-top: 15%;
+    margin-top: 17.5%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -94,7 +95,7 @@ body, html {
     flex: 0 0 auto;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .right .middle .names, .right .middle .contact, .right .middle .password {
