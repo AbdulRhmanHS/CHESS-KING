@@ -14,10 +14,12 @@ body, html {
 }
 
 :root {
+    --formGap: clamp(0.8rem, 2vw, 1.5em);
     --mainColor: #ffe4bfff;
-    --secondaryColor: #90603dff;
-    --secondaryColorA: rgba(144, 96, 61, 0.5);
-    --backgroundColor: #f2e0c9;
+    --secondaryColor: #6a3d00ff;
+    --terenaryColor: rgba(144, 96, 61, 1);
+    --ternaryColorA: rgba(144,96,61,0.5);
+    --backgroundColor: #f7f7f7;
 }
 
 .left {
@@ -37,7 +39,7 @@ body, html {
     gap: 2em;
     height: 20%;
     padding: 1rem;
-    background-color: var(--secondaryColorA);
+    background-color: var(--ternaryColorA);
 }
 
 .left .logo-content h1 {
@@ -83,31 +85,35 @@ body, html {
 }
 
 .right .upper p {
-    margin: 1em 6em 0 0;
+    margin: 1em clamp(1em, 5vw, 6em) 0 0;
 }
 
 .right .middle {
-    background-color: var(--mainColor);
+    background-color: white;
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 0.2em 0.3em #00000067;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .right .middle .names, .right .middle .contact, .right .middle .password {
     display: flex;
-    margin: 1.5em 0;
+    flex-wrap: wrap;
+    gap: var(--formGap);
+    margin-block: var(--formGap);
 }
 
 .right .middle .formGroup {
     display: flex;
+    flex: 1 1 15rem;
     flex-direction: column;
-    width: 40%;
+    min-width: 10rem;
+    max-width: 20rem;
 }
 
 .right .middle input {
-    width: 80%;
+    width: 90%;
     height: 2em;
     padding: 0.5em;
     border: 1px solid var(--secondaryColor);
@@ -125,7 +131,7 @@ body, html {
     height: 2.8em;
     width: fit-content;
     background-color: var(--secondaryColor);
-    color: var(--mainColor);
+    color: var(--backgroundColor);
     border: none;
     font-size: 1.2em;
     cursor: pointer;
