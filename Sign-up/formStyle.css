@@ -10,10 +10,10 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
     display: flex;
+    justify-content: end;
 }
 
 :root {
-    --formWidth: 50%;
     --mainColor: #ffe4bfff;
     --secondaryColor: #90603dff;
     --secondaryColorA: rgba(144, 96, 61, 0.5);
@@ -22,33 +22,33 @@ body, html {
 
 .left {
     display: flex;
+    flex: 0.8;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% - var(--formWidth));
+    align-items: space-between;
 }
 
-.logo-content {
-    margin-top: 10%;
+.left .logo-content {
+    margin-top: 15%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2em;
-    height: 22%;
-    width: 100%;
+    height: 20%;
     padding: 1rem;
     background-color: var(--secondaryColorA);
 }
 
-.logo-content h1 {
-    font-size: 3em;
+.left .logo-content h1 {
+    font-size: clamp(1.5rem, 5vw, 3em);
     color: var(--mainColor);
     margin: 0;
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
+.left .logo-content img {
+    max-width: max(100%, 16vw);
+    max-height: max(100%, 16vh);
     object-fit: contain;
 }
 
@@ -61,46 +61,41 @@ img {
 
 .right {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
     background-color: var(--backgroundColor);
-    width: var(--formWidth);
+    min-height: 100%;
+    overflow-y: auto;
 }
  
 .right .upper, .right .middle, .right .bottom {
     width: 100%;
-    height: 33.33%;
     padding-left: 3rem;
     box-sizing: border-box;
 }
 
-.right .upper p {
-    margin: 0 6em 0 0;
-}
-
 .right .upper {
-    height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    font-size: 1.5em;
-    text-align: start;
-    gap: 1.5em;
-    margin-bottom: 2.5em;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: 2em;
+}
+
+.right .upper p {
+    margin: 1em 6em 0 0;
 }
 
 .right .middle {
     background-color: var(--mainColor);
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     justify-content: center;
     box-shadow: 0 0.2em 0.3em #00000067;
-    height: 35%;
 }
 
-.names, .contact, .password {
+.right .middle .names, .right .middle .contact, .right .middle .password {
     display: flex;
     margin: 1.5em 0;
 }
@@ -111,7 +106,7 @@ img {
     width: 40%;
 }
 
-input {
+.right .middle input {
     width: 80%;
     height: 2em;
     padding: 0.5em;
@@ -121,7 +116,12 @@ input {
     box-sizing: border-box;
 }
 
-button {
+.right .bottom {
+    margin-top: 2em;
+    margin-bottom: auto;
+}
+
+.right .bottom button {
     height: 2.8em;
     width: fit-content;
     background-color: var(--secondaryColor);
@@ -130,15 +130,14 @@ button {
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 8px;
-    padding: 0.5em 3em;
+    padding: 0.5em min(3em, 4vw);
     font-weight: bold;
-    margin-top: 2em;
     box-shadow: 0.1em 0.1em 0.3em #00000067;
 }
 
 .right .bottom p {
     margin: 0;
-    margin-top: 2em;
+    margin: 2em 0;
     font-size: 1.2em;
 }
 
