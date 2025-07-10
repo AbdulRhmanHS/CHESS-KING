@@ -41,8 +41,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 /*Logo and text next to it*/
 .header-logo {
@@ -63,12 +62,13 @@ a {
     height: fit-content;
     width: fit-content;
     flex-shrink: 0;
+    margin-bottom: 0;
 }
 /*Header menu bar*/
 .list-1 {
     display: flex;
     justify-content: space-between;
-    width: min(52rem, 50vw);
+    width: min(50rem, 50vw);
     flex-shrink: 0;
 }
 .list-1 a {

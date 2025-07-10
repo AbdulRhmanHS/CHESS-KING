@@ -27,39 +27,29 @@ body, html {
     display: flex;
     flex: 0.8;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .left .logo-content {
-    margin-top: 17.5%;
-    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2em;
-    height: 20%;
-    padding: 1rem;
-    background-color: var(--ternaryColorA);
-}
-
-.left .logo-content h1 {
-    font-size: clamp(1.5rem, 5vw, 3em);
-    color: var(--mainColor);
-    margin: 0;
 }
 
 .left .logo-content img {
-    max-width: max(100%, 16vw);
-    max-height: max(100%, 16vh);
-    object-fit: contain;
+    margin: 0;
+    width: auto;
+    height: 12rem;
 }
 
-.left p, .left p a {
-    width: 100%;
-    text-align: center;
+.left .logo-content p {
+    font-family: Dhurjati;
+    font-size: 2rem;
     color: var(--mainColor);
-    font-size: 1em;
+    height: fit-content;
+    width: fit-content;
+    flex-shrink: 0;
 }
 
 .right {
