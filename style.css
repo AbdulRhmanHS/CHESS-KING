@@ -42,13 +42,13 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 /*Logo and text next to it*/
 .header-logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 25px;
 }
 /*Adjusting the logo size and text*/
 .logo {
@@ -68,7 +68,7 @@ a {
 .list-1 {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: min(52rem, 50vw);
     flex-shrink: 0;
 }
 .list-1 a {
@@ -98,7 +98,7 @@ a {
 /*Header image*/
 .header-2-r img {
     height: auto;
-    width: 600px;
+    width: min(50vw, 50rem);
     box-shadow: 0 0 10px 3px #00000067;
 }
 /*Header main big text*/
@@ -205,7 +205,7 @@ a {
 .additional {
     background-color: var(--terenaryColor);
     border-radius: 10px;
-    padding: 30px;
+    padding: 2rem;
     margin: 0 15% 150px 15%;
     display: flex;
     justify-content: space-between;
@@ -221,7 +221,7 @@ a {
     align-items: flex-start;
     justify-content: center;
     color: var(--mainColor);
-    margin-left: 80px;
+    margin-left: 40px;
     font-size: 20px;
 }
 /*Increasing the size of the bold text in additional*/
@@ -241,7 +241,7 @@ a {
     border: 3px solid var(--mainColor);
     padding: 9px 50px;
     width: fit-content;
-    margin-right: 80px;
+    margin-right: 40px;
     white-space: nowrap;
     max-width: 100%;
 }
@@ -312,7 +312,7 @@ a {
 }
 
 /*Resposiveness magic*/
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
     .content {
         min-width: 375px;
     }
@@ -339,7 +339,7 @@ a {
         font-size: 24px;
     }
     .list-1 {
-        width: 600px;
+        width: 100%;
         max-width: 100%;
         padding: 0;
     }
@@ -351,6 +351,7 @@ a {
         align-items: center;
         align-content: center;
         text-align: center;
+        margin-bottom: 30px;
     }
     .header-2-l {
         align-items: center;
@@ -360,7 +361,7 @@ a {
     }
     .header-2-r img {
         height: auto;
-        max-width: 100%;
+        width: 100%;
     }
     .header-3 {
         flex-direction: column;
@@ -387,8 +388,9 @@ a {
     .additional {
         flex-direction: column;
         align-items: center;
-        padding: 20px;
-        margin: 0 10% 100px 10%;
+        width: fit-content;
+        margin: 0 auto 150px auto;
+
     }
     .additional .text p {
         align-items: center;
