@@ -48,11 +48,6 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
-    background: url("../pictures/20250710_1822_Chess_Pieces_Paradox_simple_compose.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     display: flex;
     justify-content: end;
     font-family: 'classicabook', 'classicabold', 'classicabook_oblique', 'classicabold_oblique', 'romanicumbold', sans-serif;
@@ -71,6 +66,16 @@ body, html {
 a {
     text-decoration: none;
     font-weight: bold;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .left {
