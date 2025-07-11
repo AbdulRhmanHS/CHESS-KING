@@ -1,3 +1,48 @@
+@font-face {
+    font-family: 'classicabold';
+    src: url('../fonts/classica-bold-webfont.woff2') format('woff2'),
+         url('../fonts/classica-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'classicabold_oblique';
+    src: url('../fonts/classica-boldoblique-webfont.woff2') format('woff2'),
+         url('../fonts/classica-boldoblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'classicabook';
+    src: url('../fonts/classica-book-webfont.woff2') format('woff2'),
+         url('../fonts/classica-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'classicabook_oblique';
+    src: url('../fonts/classica-bookoblique-webfont.woff2') format('woff2'),
+         url('../fonts/classica-bookoblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'romanicumbold';
+    src: url('../fonts/romanicum_bold-webfont.woff2') format('woff2'),
+         url('../fonts/romanicum_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -11,6 +56,7 @@ body, html {
     background-size: cover;
     display: flex;
     justify-content: end;
+    font-family: 'classicabook', 'classicabold', 'classicabook_oblique', 'classicabold_oblique', 'romanicumbold', sans-serif;
 }
 
 :root {
@@ -21,6 +67,11 @@ body, html {
     --ternaryColorA: rgba(144,96,61,0.5);
     --backgroundColor: #fdfaf6;
     --inputBorderColor: #dbd6d0;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .left {
@@ -44,7 +95,7 @@ body, html {
 }
 
 .left .logo-content p {
-    font-family: Dhurjati;
+    font-family: 'romanicumbold';
     font-size: 2rem;
     color: var(--mainColor);
     height: fit-content;
@@ -111,6 +162,22 @@ body, html {
     border-radius: 5px;
     font-size: 1em;
     box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.right .middle input:focus {
+    outline: none;
+    border: 2px solid var(--secondaryColor);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.right .middle input:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
+
+.right .middle input:valid:focus,
+.right .middle input:valid:not(:placeholder-shown) {
+    border: 2px solid #0074d9;
 }
 
 .right .bottom {

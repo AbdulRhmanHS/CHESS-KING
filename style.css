@@ -1,9 +1,53 @@
-/*Adding the background Image to full screen and making it not repeat itself*/
+@font-face {
+    font-family: 'classicabold';
+    src: url('fonts/classica-bold-webfont.woff2') format('woff2'),
+         url('fonts/classica-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'classicabold_oblique';
+    src: url('fonts/classica-boldoblique-webfont.woff2') format('woff2'),
+         url('fonts/classica-boldoblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'classicabook';
+    src: url('fonts/classica-book-webfont.woff2') format('woff2'),
+         url('fonts/classica-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'classicabook_oblique';
+    src: url('fonts/classica-bookoblique-webfont.woff2') format('woff2'),
+         url('fonts/classica-bookoblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'romanicumbold';
+    src: url('fonts/romanicum_bold-webfont.woff2') format('woff2'),
+         url('fonts/romanicum_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body, html {
     margin: 0;
     padding: 0;
     background-color: var(--backgroundColor);
-    font-family: sans-serif, Dhurjati;
+    font-family: 'classicabook', 'classicabold', 'classicabook_oblique', 'classicabold_oblique', 'romanicumbold', sans-serif;
 }
 
 :root {
@@ -56,7 +100,7 @@ a {
     height: 100px;
 }
 .logo-text {
-    font-family: Dhurjati;
+    font-family: 'romanicumbold';
     font-size: 30px;
     color: var(--mainColor);
     height: fit-content;
@@ -103,7 +147,6 @@ a {
 }
 /*Header main big text*/
 #hero {
-    font-family: Dhurjati;
     font-weight: bold;
     font-size: 70px;
     color: var(--mainColor);
@@ -184,7 +227,6 @@ a {
     background-color: var(--accentColor);
     display: flex;
     flex-direction: column;
-    font-family: aakar;
     color: var(--terenaryColor);
     font-size: 32px;
     align-items: center;
@@ -210,7 +252,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: sans-serif;
     gap: 30px;
     min-width: fit-content;
 }
@@ -247,7 +288,6 @@ a {
 }
 /*Footer background and font color*/
 .footer {
-    font-family: sans-serif;
     color: var(--mainColor);
     background-color: var(--terenaryColor);
     padding: 15px;
@@ -272,7 +312,6 @@ a {
 /*Footer logo text*/
 .footer .footer-l .text {
     font-size: 16px;
-    font-family: Dhurjati;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -283,6 +322,7 @@ a {
     padding: 0;
 }
 .footer .footer-l .text p b {
+    font-family: 'romanicumbold';
     font-size: 24px;
 }
 /*vertical bar that seperates the footer content*/
