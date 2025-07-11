@@ -20,12 +20,12 @@ body, html {
     --terenaryColor: rgba(144, 96, 61, 1);
     --ternaryColorA: rgba(144,96,61,0.5);
     --backgroundColor: #fdfaf6;
-    --accentColor: #f0e7dc;
+    --inputBorderColor: #dbd6d0;
 }
 
 .left {
     display: flex;
-    flex: 0.8;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -107,7 +107,7 @@ body, html {
     width: 90%;
     height: 2em;
     padding: 0.5em;
-    border: 1px solid var(--secondaryColor);
+    border: 1px solid var(--inputBorderColor);
     border-radius: 5px;
     font-size: 1em;
     box-sizing: border-box;
@@ -127,7 +127,7 @@ body, html {
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 8px;
-    padding: 0.5em min(3em, 4vw);
+    padding: 0.5em min(3em, 20vw);
     font-weight: bold;
     box-shadow: 0.1em 0.1em 0.3em #00000067;
 }
@@ -140,4 +140,61 @@ body, html {
 
 .right .bottom p a {
     color: var(--secondaryColor);
+}
+
+@media (max-width: 700px) {
+    .left {
+        flex: 0;
+        background: none !important;
+        display: none;
+    }
+
+    .right .upper, .right .middle, .right .bottom {
+        padding: 1rem;
+    }
+
+    .right .upper {
+        margin-bottom: 0.5rem;
+    }
+
+    .right .upper p {
+        font-size: 1.2rem;
+        margin: 0.5em 0;
+    }
+
+    .right .upper, .right .bottom {
+        text-align: center;
+    }
+
+    .right .middle {
+        align-items: center;
+    }
+
+    .right .middle h2 {
+        text-align: center;
+    }
+
+    .right .middle .names, .right .middle .contact, .right .middle .password {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-block: 1.5rem;
+    }
+
+    .right .middle .formGroup {
+        flex: 0;
+    }
+
+    .right .middle input {
+        width: 100%;
+    }
+
+    .right .bottom {
+        margin-top: 1rem;
+        padding-bottom: 0;
+    }
+
+    .right .bottom p {
+        font-size: 1em;
+    }
 }
