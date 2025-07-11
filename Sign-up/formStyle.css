@@ -48,7 +48,6 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: sans-serif, Dhurjati;
     background: url("../pictures/20250710_1822_Chess_Pieces_Paradox_simple_compose.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -197,6 +196,7 @@ a {
     padding: 0.5em min(3em, 20vw);
     font-weight: bold;
     box-shadow: 0.1em 0.1em 0.3em #00000067;
+    font-family: 'classicabook', 'classicabold', 'classicabook_oblique', 'classicabold_oblique', 'romanicumbold', sans-serif;
 }
 
 .right .bottom p {
